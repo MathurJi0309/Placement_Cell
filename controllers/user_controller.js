@@ -11,10 +11,16 @@ module.exports.profile=function(req,res){
 // }
 
 module.exports.SignIn=function(req,res){
+    if(req.isAuthenticated()){
+        return res.redirect('/home')
+    }
     return res.render('user_sign_in')
 }
 
 module.exports.SignUp=function(req,res){
+    if(req.isAuthenticated()){
+        return res.redirect('/home')
+    }
     return res.render('user_sign_up')
 }
 
