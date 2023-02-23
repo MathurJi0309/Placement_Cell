@@ -5,6 +5,7 @@ const homeController=require('../controllers/home_controller');
 console.log('Router loaded')
 // router.get('/',homeController.home);
 router.use('/',require('./users.js'))
-router.get('/home',homeController.home)
+router.use('/home',require('./home'))
+router.use('/student',require('./students'))
 
 module.exports=router;
