@@ -31,27 +31,27 @@ const studentSchema=new mongoose.Schema(
             type:Number,
             required:true,
         },
-        // placement:{
-        //     type:String,
-        //     enum:["placed","Not Placed"],
-        //     required:true,
-        // },
-        // interviews:[
-        //     {
-        //        company:{
-        //         type:String,
-        //         required:true,
-        //        },
-        //        date:{
-        //         type:String,
-        //         required:true,
-        //        },
-        //        result:{
-        //         type:String,
-        //         emun:["Pass","Fail","Did't Attempt","On Hold"],
-        //        }
-        //     }
-        // ]
+        placement:{
+            type:String,
+            enum:["placed","Not Placed"],
+            required:true,
+        },
+        interviews:[
+            {
+               company:{
+                type:String,
+                required:true,
+               },
+               date:{
+                type:String,
+                required:true,
+               },
+               result:{
+                type:String,
+                emun:["Pass","Fail","Did't Attempt","On Hold"],
+               }
+            }
+        ]
     },{
         timestamps:true
     }

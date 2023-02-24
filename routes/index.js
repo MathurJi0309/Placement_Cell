@@ -7,5 +7,6 @@ console.log('Router loaded')
 router.use('/',require('./users.js'))
 router.use('/home',require('./home'))
 router.use('/student',require('./students'))
+router.use('/interview',require('./interviews'))
 
 module.exports=router;
