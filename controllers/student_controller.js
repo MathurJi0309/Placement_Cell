@@ -11,6 +11,20 @@ module.exports.addStudent=function(req,res){
    
 }
 
+module.exports.editStudent=function(req,res){
+    if(req.isAuthenticated()){
+        return res.render("edit_student",{
+            title:"Edit Student",
+            Student:Student.findById(req.params.id)
+        })
+    }
+}
+
+
+module.exports.update=function(req,res){
+    return res.redirect('/home')
+}
+
 module.exports.createStudent=function(req,res){
     console.log("req.body",req.body)
     console.log("Student.length",Student.length)

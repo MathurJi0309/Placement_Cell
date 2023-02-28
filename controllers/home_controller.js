@@ -14,6 +14,7 @@ const Interview=require('../models/interview');
 // }
 
 module.exports.home=function(req,res){
+
     if(req.isAuthenticated()){
         Student.find({}).populate('interviews').exec(function(err,students){
             console.log("studnets.length",students)
@@ -23,6 +24,11 @@ module.exports.home=function(req,res){
         
             })
            })
+        //    Interview.find({}).populate('students.student').exec(function(err,interviews){
+        //     console.log("studnets.length",interviews)
+        //     return
+        //     })
+           
     }else{
         return res.redirect("/")
     }
